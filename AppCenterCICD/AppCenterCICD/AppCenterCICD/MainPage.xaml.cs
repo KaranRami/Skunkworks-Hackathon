@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace AppCenterCICD
 
         private void LogMessage_Clicked(object sender, EventArgs e)
         {
-
+            Analytics.TrackEvent(entMessage.Text);
         }
 
         private void CrashApp_Clicked(object sender, EventArgs e)
