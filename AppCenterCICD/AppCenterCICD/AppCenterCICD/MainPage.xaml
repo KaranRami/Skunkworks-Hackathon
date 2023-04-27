@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCenterCICD.MainPage"
+             Visual="Material"
+             Padding="20">
+
+    <StackLayout>
+        <Entry x:Name="entMessage"  Placeholder="Enter Message" HorizontalOptions="FillAndExpand"/>
+        <Button Clicked="LogMessage_Clicked" Text="Log Message"/>
+        <Button Clicked="CrashApp_Clicked" Text="Crash App"/>
+    </StackLayout>
+
+</ContentPage>
