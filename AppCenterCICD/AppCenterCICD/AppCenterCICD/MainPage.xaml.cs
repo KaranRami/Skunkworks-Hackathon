@@ -1,4 +1,5 @@
 ﻿using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,14 +17,26 @@ namespace AppCenterCICD
             InitializeComponent();
         }
 
-        private void LogMessage_Clicked(object sender, EventArgs e)
-        {
-            Analytics.TrackEvent(entMessage.Text);
-        }
-
         private void CrashApp_Clicked(object sender, EventArgs e)
         {
             throw new Exception(entMessage.Text);
+        }
+
+        private void HandledCrashApp_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                throw new Exception(entMessage.Text);
+            }
+            catch (Exception ex)
+            {
+                Crashes.TrackError(ex);
+            }
+        }
+
+        private void LogMessage_Clicked(object sender, EventArgs e)
+        {
+            Analytics.TrackEvent(entMessage.Text);
         }
     }
 }
