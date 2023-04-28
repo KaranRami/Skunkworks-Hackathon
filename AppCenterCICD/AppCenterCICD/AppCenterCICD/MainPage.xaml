@@ -5,10 +5,10 @@
              Visual="Material"
              Padding="20">
 
-    <StackLayout>
+    <StackLayout VerticalOptions="Center">
         <Entry x:Name="entMessage"  Placeholder="Enter Message" HorizontalOptions="FillAndExpand"/>
-        <Button Clicked="LogMessage_Clicked" Text="Log Message"/>
-        <Button Clicked="HandledCrashApp_Clicked" Text="Log Exception Error!!!"/>
+        <!--<Button Clicked="LogMessage_Clicked" Text="Log Message"/>-->
+        <!--<Button Clicked="HandledCrashApp_Clicked" Text="Log Exception Error!!!"/>-->
         <Button Clicked="CrashApp_Clicked" Text="Crash App"/>
     </StackLayout>
 

@@ -32,11 +32,13 @@ namespace AppCenterCICD
             {
                 Crashes.TrackError(ex);
             }
+            DisplayAlert("Success", "Crash Exception Logged", "OK");
         }
 
         private void LogMessage_Clicked(object sender, EventArgs e)
         {
             Analytics.TrackEvent(entMessage.Text);
+            DisplayAlert("Success", "Log Message Successed", "OK");
         }
     }
 }
